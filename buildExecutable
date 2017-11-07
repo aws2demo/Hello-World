@@ -1,0 +1,7 @@
+cd /
+cd /home/ec2-user/Hello-World
+docker stop hello-world
+docker rm hello-world
+docker build -t hello-world /home/ec2-user/Hello-World
+docker run -d --name hello-world -p 80:80 -v /home/ec2-user/Hello-World/src:/var/www/html hello-world
+
